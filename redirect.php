@@ -6,13 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Perform redirection based on the selected role
     switch ($role) {
         case 'visitor':
-            header("visitor.html");
+            header("./visitor.html");
             break;
         case 'translator':
-            header("translator.html");
+            header("./translatorfinal.html");
             break;
         default:
             // Handle other cases or errors
+            header("./login.html");
             break;
     }
 }
